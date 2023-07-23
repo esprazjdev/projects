@@ -1,0 +1,80 @@
+:root {
+  --main-color: #92B48F;
+}
+
+
+.contacts-body {
+  padding-top: 65px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.contacts-main-image-container {
+  height: 300px;
+  background-image: url(../imagens/cerca-pinus.jpeg);
+  background-position: center;
+  background-position-y: 50%;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.contacts-title {
+  color: white;
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.contacts-section-container {
+  padding: 0 200px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  height: 240px;
+}
+
+.contacts-left-section, .contacts-middle-section, .contacts-right-section {
+  flex: 1;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+}
+
+.contacts-container img {
+  height: 40px;
+  width: 40px;
+  margin-bottom: 15px;
+}
+
+.contact-way {
+  color: var(--main-color);
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.contact-message.firsttwo {
+  margin-bottom: 39px;
+}
+
+.contact-message {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contact-link {
+  font-weight: 700;
+}
+
+.contacts {
+  text-decoration: underline;
+}
+

@@ -1,0 +1,96 @@
+:root {
+  --main-color: #92B48F;
+}
+
+  .about-us-body {
+    padding-top: 65px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .main-image-container {
+    height: 300px;
+    background-image: url(../imagens/cerca-branca.jpeg);
+    background-position: center;
+    background-position-y: 36%;
+  }
+
+  .overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .overlay p {
+    color: white;
+    
+  }
+
+  .about-us-title {
+    font-size: 50px;
+    font-weight: 700;
+  }
+
+  .about-us-greet {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  .about-us-main-content {
+    display: flex;
+    padding: 0 15%;
+    margin-top: 70px;
+    height: 400px;
+  }
+
+  .about-us-left-section {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    align-items: initial;
+  }
+
+  .about-us-left-section-title {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--main-color);
+    margin-bottom: 20px;
+  }
+
+  .about-us-left-section-text {
+    text-justify: auto;
+  }
+
+
+  .about-us-right-section {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-us-right-section-title {
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+  
+  .about-us-right-section-subtitle {
+    margin-bottom: 36px;
+    color: var(--main-color);
+  }
+
+  .about-us-right-section img {
+    height: 220px;
+    width: 220px;
+    border-radius: 110px;
+    object-fit: cover;
+  }
+
+  .about-us {
+    text-decoration: underline;
+  }

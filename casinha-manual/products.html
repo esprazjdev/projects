@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/header.v3.css">
+  <link rel="stylesheet" href="styles/general.v3.css">
+  <link rel="stylesheet" href="styles/products.v2.css">
+  <link rel="stylesheet" href="styles/responsive.v3.css">
+
+  <link rel="icon" type="image/x-icon" href="imagens/home-outline.svg">
+  <title>Casinha Manual</title>
+</head>
+<body class="products-body">
+  <div class="header">
+    <div class="left-section">
+      <img class="logo" src="imagens/logo-nova.png" alt="">
+    </div>
+    <nav class="right-section">
+      <a class="home nav-item" href="index.html">Home</a>
+      <a class="about-us nav-item" href="about-us.html">Sobre</a>
+      <a class="products nav-item" href="products.html">Produtos</a>
+      <a class="contacts nav-item" href="contacts.html">Contato</a>
+    </nav>
+    <button class="three-line-menu"><div class="line"></div>
+    </button>
+  </div>
+  <nav class="mobile-nav">
+    <a class="home nav-item" href="index.html">Home</a>
+    <a class="about-us nav-item" href="about-us.html">Sobre</a>
+    <a class="products nav-item" href="products.html">Produtos</a>
+    <a class="contacts nav-item" href="contacts.html">Contato</a>
+  </nav>
+
+  <div class="buttons-container">
+    <button class="active">Todos</button>
+    <button>Pinus</button>
+    <button>Planejados</button>
+    <button>Artesanato</button>
+  </div>
+
+  <div class="products-grid-container">
+    <div class="products-grid-element" data-filter="pinus">
+      <img src="imagens/mesa.jpeg" alt="">
+      <p class="product-class">ARTESANATO</p>
+      <p class="product-name">Mesa de madeira de lei</p>
+      <button class="details-button">Detalhes</button>
+      <div class="details-cover">
+        <button class="x-container"></button>
+        <p>Preço: R$900</p>
+        <p>200cm x 320cm</p>
+        <p>Frete grátis</p>
+      </div>
+    </div>
+    <div class="products-grid-element" data-filter="planejados">
+      <img src="imagens/estante.jpeg" alt="">
+      <p class="product-class">MÓVEIS PLANEJADOS</p>
+      <p class="product-name">Projeto de despensa planejado</p>
+      <button class="details-button">Detalhes</button>
+      <div class="details-cover">
+        <button class="x-container"></button>
+        <p>Preço: R$900</p>
+        <p>200cm x 320cm</p>
+        <p>Frete grátis</p>
+      </div>
+    </div>
+    <div class="products-grid-element" data-filter="artesanato">
+      <img src="imagens/cerca-pinus.jpeg" alt="">
+      <p class="product-class">PINUS</p>
+      <p class="product-name">Cerca de pinus com acabamento para crianças</p>
+      <button class="details-button">Detalhes</button>
+      <div class="details-cover">
+        <button class="x-container"></button>
+        <p>Preço: R$900</p>
+        <p>200cm x 320cm</p>
+        <p>Frete grátis</p>
+      </div>
+    </div>
+    <div class="products-grid-element" data-filter="pinus">
+      <img src="imagens/mesinha.jpeg" alt="">
+      <p class="product-class">MÓVEIS PLANEJADOS</p>
+      <p class="product-name">Mesa madeira de lei</p>
+      <button class="details-button">Detalhes</button>
+      <div class="details-cover">
+        <button class="x-container"></button>
+        <p>Preço: R$900</p>
+        <p>200cm x 320cm</p>
+        <p>Frete grátis</p>
+      </div>
+    </div>
+    <div class="products-grid-element" data-filter="planejados">
+      <img src="imagens/criado.jpeg" alt="">
+      <p class="product-class">PINUS</p>
+      <p class="product-name">Armário de madeira de lei</p>
+      <button class="details-button">Detalhes</button>
+      <div class="details-cover">
+        <button class="x-container"></button>
+        <p>Preço: R$900</p>
+        <p>200cm x 320cm</p>
+        <p>Frete grátis</p>
+      </div>
+    </div>
+    <div class="products-grid-element" data-filter="artesanato">
+      <img src="imagens/sofa-colorido.jpeg" alt="">
+      <p class="product-class">ARTESANATO</p>
+      <p class="product-name">Banco de madeira colorido</p>
+      <button class="details-button">Detalhes</button>
+      <div class="details-cover">
+        <button class="x-container"></button>
+        <p>Preço: R$900</p>
+        <p>200cm x 320cm</p>
+        <p>Frete grátis</p>
+      </div>
+    </div>
+    <div class="products-grid-element" data-filter="pinus">
+      <img src="imagens/banco.jpeg" alt="">
+      <p class="product-class">PINUS</p>
+      <p class="product-name">Banco com pano colorido</p>
+      <button class="details-button">Detalhes</button>
+      <div class="details-cover">
+        <button class="x-container"></button>
+        <p>Preço: R$900</p>
+        <p>200cm x 320cm</p>
+        <p>Frete grátis</p>
+      </div>
+    </div>
+    <div class="products-grid-element" data-filter="planejados">
+      <img src="imagens/estante2.jpeg" alt="">
+      <p class="product-class">ARTESANATO</p>
+      <p class="product-name">Armário planejado</p>
+      <button class="details-button">Detalhes</button>
+      <div class="details-cover">
+        <button class="x-container"></button>
+        <p>Preço: R$900</p>
+        <p>200cm x 320cm</p>
+        <p>Frete grátis</p>
+      </div>
+    </div>
+    <div class="products-grid-element" data-filter="artesanato">
+      <img src="imagens/cerca-branca.jpeg" alt="">
+      <p class="product-class">MÓVEIS PLANEJADOS</p>
+      <p class="product-name">Cerca branca com acabamento para crianças</p>
+      <button class="details-button">Detalhes</button>
+      <div class="details-cover">
+        <button class="x-container"></button>
+        <p>Preço: R$900</p>
+        <p>200cm x 320cm</p>
+        <p>Frete grátis</p>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="javascript/script.v2.js"></script>
+
+
+</body>
+</html>

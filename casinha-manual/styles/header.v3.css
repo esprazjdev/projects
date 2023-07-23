@@ -1,0 +1,123 @@
+:root {
+  --main-color: #92B48F;
+}
+
+  /* Three line menu (mobile menu) */
+
+  .three-line-menu {
+    position: relative;
+    display: block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+
+    z-index: 99;
+
+    margin-right: 10px;
+  }
+
+  .three-line-menu .line, .three-line-menu:after, .three-line-menu:before {
+    content: '';
+    display: block;
+    height: 5px;
+    background-color: white;
+    width: 100%;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  .three-line-menu.active .line {
+    opacity: 0;
+  }
+
+  .three-line-menu.active:after {
+    transform: rotate(45deg) translate(-10px, -6px);
+  }
+
+  .three-line-menu.active:before {
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+
+  .mobile-nav {
+    position: fixed;
+    background-color: var(--main-color);
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 110px;
+    
+    transform: translateX(-100%);
+    transition: transform 0.4s;
+    z-index: 98;
+  }
+
+  .mobile-nav a {
+    width: 50%;
+    text-align: center;
+    margin: 20px 0;
+    padding: 20px 0;
+    background-color: rgba(2, 78, 34, 0.616);
+    color: #fff;
+  }
+
+  .mobile-nav a:hover {
+      background-color: #fff;
+      color: var(--main-color);
+  }
+
+
+  .mobile-nav.active {
+    transform: translateX(0);
+  }
+  
+
+
+  /* Header structure */
+
+  .header {
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    height: 64px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 99;
+  }
+
+
+  .left-section {
+    margin-left: 30px;
+  }
+
+  .logo {
+    margin-top: 5px;
+    height: 25px;
+    user-select: none;
+  }
+
+  .right-section {
+    margin-left: 20px;
+    margin-right: 60px;
+    display: flex;
+  }
+
+  .nav-item {
+    color: white;
+    margin-right: 40px;
+    text-decoration: none;
+  }
+
