@@ -70,3 +70,11 @@ window.addEventListener("scroll", function
   }
 })
 
+const menuButton = document.querySelector('.three-line-menu')
+const mobileNav = document.querySelector('.mobile-nav')
+
+menuButton.addEventListener('click', ()=> {
+  menuButton.classList.toggle('active')
+  mobileNav.classList.toggle('active')
+})
+

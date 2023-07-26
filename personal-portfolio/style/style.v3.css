@@ -1,7 +1,84 @@
 :root {
-  --main-color: rgb(87, 87, 87);
+  --main-color: rgb(27, 22, 39);
+  --secundary-color: rgb(87, 87, 87);
   --white: rgb(255, 255, 255);
 }
+
+.three-line-menu {
+  position: relative;
+  display: block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+
+  display: none;
+  background: none;
+  outline: none;
+  border: none;
+
+  z-index: 102;
+
+  margin-right: 10px;
+}
+
+.three-line-menu .line, .three-line-menu:after, .three-line-menu:before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: var(--white);
+  width: 100%;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.three-line-menu.active .line {
+  opacity: 0;
+}
+
+.three-line-menu.active:after {
+  transform: rotate(45deg) translate(-10px, -6px);
+}
+
+.three-line-menu.active:before {
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.mobile-nav {
+  position: fixed;
+  background-color: var(--main-color);
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 110px;
+  
+  transform: translateX(-100%);
+  transition: transform 0.4s;
+  z-index: 97;
+}
+
+.mobile-nav a {
+  width: 50%;
+  text-align: center;
+  margin: 20px 0;
+  padding: 20px 0;
+  background-color: var(--secundary-color);
+  color: #fff;
+}
+
+.mobile-nav a:hover {
+  background-color: #fff;
+  color: var(--main-color);
+}
+
+
+.mobile-nav.active {
+  transform: translateX(0);
+}
+
 
 
 html {
@@ -27,7 +104,7 @@ p, h1 {
   height: 100px;
   width: 100%;
   position: fixed;
-  z-index: 2;
+  z-index: 101;
   transition: 0.2s;
 }
 
@@ -41,11 +118,11 @@ p, h1 {
 }
 
 .header a.active {
-  color: var(--main-color);
+  color: var(--secundary-color);
 }
 
 .header.not-on-top a.active {
-  color: var(--main-color);
+  color: var(--secundary-color);
 }
 
 .left-section {
@@ -61,6 +138,7 @@ p, h1 {
 .right-section {
   margin-right: 50px;
   user-select: none;
+  display: flex;
 }
 
 .right-section a{
@@ -96,11 +174,12 @@ p, h1 {
 }
 
 .parallax-text {
-  padding-top: 200px;
+  padding-top: 260px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  text-align: center;
 }
 
 .section-parallax h1{
@@ -122,7 +201,7 @@ p, h1 {
 #about-me {
   background-color: var(--white);
   padding: 60px 150px 60px 150px;
-  margin: 60px;
+
 }
 
 .section-top {
@@ -131,8 +210,17 @@ p, h1 {
   justify-content: space-between;
 }
 
+@media (min-width: 1200px) {
+  .top-text {
+    width: 50%;
+  }
+
+  .bottom-text {
+    width: 50%;
+  }
+}
+
 .top-text {
-  width: 50%;
   padding: 20px;
 }
 
@@ -144,6 +232,7 @@ p, h1 {
   width: 50%;
   height: 300px;
 }
+
 
 .section-bottom {
   display: flex;
@@ -213,7 +302,7 @@ p, h1 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: left;
+  object-position: center;
 }
 
 .project-image a {
@@ -221,11 +310,10 @@ p, h1 {
   height: 100%;
 }
 
-
 .project-description {
   border-top: 1px solid rgb(105, 105, 105);
-  height: 30%;
-  padding: 10px 20px 10px 20px;
+  overflow: hidden;
+  padding: 10px 20px 30px 20px;
 }
 
 .project-description h1{
@@ -235,8 +323,8 @@ p, h1 {
 
 .project-description p{
   font-size: 12px;
+  padding-bottom: 10px;
 }
-
 
 #contacts {
   height: 500px;
@@ -247,10 +335,118 @@ p, h1 {
   height: 400px;
 }
 
-
-
 .line {
   height: 1px;
   background-color: rgb(0, 0, 0);
   margin: 0 160px 0 160px;
+}
+
+@media (max-width: 400px) {
+
+  #about-me {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section-top, .section-bottom {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 16px;
+  }
+
+  .top-text, .bottom-text {
+    width: 100%;
+  }
+
+  #projects {
+    padding: 40px;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-item {
+    width: 2fr;
+    border: 1px solid rgb(105, 105, 105);
+    flex-direction: column;
+    padding-bottom: 10px;
+  }
+
+  .line {
+    margin: 0 50px;
+  }
+}
+
+@media (min-width: 401px) AND (max-width: 1024px) {
+
+  #about-me {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section-top, .section-bottom {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 16px;
+  }
+
+  .top-text, .bottom-text {
+    width: 100%;
+  }
+
+  #projects {
+    padding: 40px;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .grid-item {
+    height: 300px;
+    width: 1fr;
+    border: 1px solid rgb(105, 105, 105);
+    flex-direction: column;
+  }
+
+
+  .line {
+    margin: 0 50px;
+  }
+}
+
+@media (max-width: 1024px) {
+  header .right-section {
+    display: none;
+  }
+
+  .three-line-menu {
+    display: block;
+  }
+
+}
+
+@media (max-width: 520px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-item {
+    height: 300px;
+    width: 1fr;
+    border: 1px solid rgb(105, 105, 105);
+    flex-direction: column;
+  }
+
+}
+
+@media (min-width: 540px) {
+  .project-description {
+    padding: 10px 20px 60px 20px;
+  }
 }
